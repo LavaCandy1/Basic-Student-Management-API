@@ -25,7 +25,7 @@ This is a basic RESTful API built using FastAPI that simulates managing a collec
 
 1. "/" -> basic home endpoint
 
-# get
+### get
 
 2. "/get" -> get details of all students
 3. "/get/{student_id}" -> get details of a perticular student
