@@ -54,19 +54,19 @@ This is a basic RESTful API built using FastAPI that simulates managing a collec
 
 - Student
 
-{
-"Name": "string",
-"Age": "integer",
-"Year": "integer"
-}
+  {
+  "Name": "string",
+  "Age": "integer",
+  "Year": "integer"
+  }
 
 - UpdateStudent
 
-{
-"Name": "string (optional , default = None)",
-"Age": "integer (optional , default = None)",
-"Year": "integer (optional , default = None)"
-}
+  {
+  "Name": "string (optional , default = None)",
+  "Age": "integer (optional , default = None)",
+  "Year": "integer (optional , default = None)"
+  }
 
 ## Running API
 
