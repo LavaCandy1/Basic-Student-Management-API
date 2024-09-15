@@ -16,8 +16,8 @@ This is a basic RESTful API built using FastAPI that simulates managing a collec
    pip install -r requirements.txt
 
 3. Run the FastAPI app using Uvicorn:
-   uvicorn <filename>:testApp --reload
-   Replace <filename> with the name of the Python file containing the FastAPI code.
+   uvicorn [filename}:testApp --reload
+   Replace {filename} with the name of the Python file containing the FastAPI code.
 
 4. Navigate to http://127.0.0.1:8000 to access the API.
 
