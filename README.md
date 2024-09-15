@@ -25,7 +25,49 @@ This is a basic RESTful API built using FastAPI that simulates managing a collec
 
 1. "/" -> basic home endpoint
 
-### get
+### GET Methods
 
 2. "/get" -> get details of all students
 3. "/get/{student_id}" -> get details of a perticular student
+4. "/get-by-name" -> get details of student using name
+
+### POST Methods
+
+5. "/create-student/{student_id}" -> create a new student using student id
+
+### PUT Methods (update)
+
+6. "/update-student/{student_id}" -> update details of a student using student id
+   Request body with optional fields for updating
+   {
+   "Name": "John",
+   "Age": 22,
+   "Year": "4"
+   }
+
+### DELETE Methods
+
+7. "/delete" -> delete student details using student id
+   student_id in request body
+
+## Data Model
+
+### Student
+
+{
+"Name": "string",
+"Age": "integer",
+"Year": "integer"
+}
+
+### UpdateStudent
+
+{
+"Name": "string (optional , default = None)",
+"Age": "integer (optional , default = None)",
+"Year": "integer (optional , default = None)"
+}
+
+## Running API
+
+You can test the API using any API client like Postman or cURL, or directly through **the built-in FastAPI documentation** available at http://127.0.0.1:8000/docs.
