@@ -22,21 +22,27 @@ students = {
 class Student(BaseModel):
     Name : str
     Age : int
-    Year : str
+    Year : int
 
 
 class updateStudent(BaseModel):
     Name : Optional[str] = None
-    Age : Optional[str] = None
-    Year : Optional[str] = None
+    Age : Optional[int] = None
+    Year : Optional[int] = None
 
 
 @testApp.get("/")
 def index():
-    return {"First" : "Name"}
+    return {"Home" : "Sweet"}
+
+@testApp.get("/get")
+def get_student():
+    return students
 
 @testApp.get("/get/{student_id}")
-def get_student(student_id: int ):
+def get_student(student_id: int = Path(gt=0)):
+    if student_id not in students:
+        return {"Error" : f"Student with id {student_id} not found!"}
     return students[student_id]
 
 @testApp.get("/get-by-name")
