@@ -25,7 +25,7 @@ class Student(BaseModel):
     Year : int
 
 
-class updateStudent(BaseModel):
+class UpdateStudent(BaseModel):
     Name : Optional[str] = None
     Age : Optional[int] = None
     Year : Optional[int] = None
@@ -46,24 +46,24 @@ def get_student(student_id: int = Path(gt=0)):
     return students[student_id]
 
 @testApp.get("/get-by-name")
-def get_student(student_name: str , test:int):
+def get_student(student_name: str):
     for student in students:
         if student_name == students[student]["Name"]:
             return students[student]
         
     return {"Error":"Name dosen't exist"}
 
-@testApp.post("/save-student/{student_id}")
+@testApp.post("/create-student/{student_id}")
 def save_student(student_id : int, student : Student):
     if student_id in students:
-        return {"Error" : "Id exists!"}
+        return {"Error" : "Student Id exists!"}
     
     students[student_id] = student
     print(students)
     return students[student_id]
 
 @testApp.put("/update-student/{student_id}")
-def update_student(student_id : int , student : updateStudent):
+def update_student(student_id : int , student : UpdateStudent):
     if student_id not in students:
         return {"Error" : "Student ID not found"}
     
