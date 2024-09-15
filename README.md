@@ -71,3 +71,8 @@ This is a basic RESTful API built using FastAPI that simulates managing a collec
 ## Running API
 
 You can test the API using any API client like Postman or cURL, or directly through **the built-in FastAPI documentation** available at http://127.0.0.1:8000/docs.
+
+
+
+This `README.md` file includes details about how to set up and run your FastAPI project, the available API endpoints, and the data models used.
+
